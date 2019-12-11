@@ -1,0 +1,10 @@
+me\mattdocherty\nodropplugin\commands\Add.class
+me\mattdocherty\nodropplugin\files\PlayerOptionsConfig.class
+me\mattdocherty\nodropplugin\commands\Remove.class
+me\mattdocherty\nodropplugin\events\OnPlayerDropItem.class
+me\mattdocherty\nodropplugin\commands\Check.class
+me\mattdocherty\nodropplugin\convert\SerializeEnchantments.class
+me\mattdocherty\nodropplugin\convert\SerializeItem.class
+me\mattdocherty\nodropplugin\commands\BaseCommand.class
+me\mattdocherty\nodropplugin\events\OnPlayerJoin.class
+me\mattdocherty\nodropplugin\NoDropPlugin.class

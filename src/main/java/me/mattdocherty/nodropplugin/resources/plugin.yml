@@ -1,0 +1,10 @@
+name: NoDropPlugin
+version: 1.0.0
+main: me.mattdocherty.nodropplugin.NoDropPlugin
+api-version: 1.13
+authors: [MatthewDocherty]
+description: Checks to see if the user is willing to drop the item.
+commands:
+  nd:
+    description: "Adds / Removes / Checks if held item to the list of no drop items."
+    usage: "/nd [remove|check]"
