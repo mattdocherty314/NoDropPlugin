@@ -12,6 +12,7 @@ public class BaseCommand implements CommandExecutor {
         if (sender instanceof Player) {
             Player p = (Player) sender;
             String playerUUID = p.getUniqueId().toString(); // Get player UUID for config access
+
             if (command.getName().equals("nd")) {
                 // If no arguments are given, add the item held in the player's hand to the list of no drop items.
                 if (args.length == 0) {

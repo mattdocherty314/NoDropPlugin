@@ -17,7 +17,11 @@ public class OnPlayerJoin implements Listener {
 
     }
 
-    private boolean hasConfigSettings(Player p) {
-        return PlayerOptionsConfig.get().isSet(p.getUniqueId().toString());
+    private boolean hasConfigSettings(Player p)
+    {
+        boolean enabledSet = PlayerOptionsConfig.get().isSet(p.getUniqueId().toString()+".enabled");
+        boolean itemsSet = PlayerOptionsConfig.get().isSet(p.getUniqueId().toString()+".items");
+        System.out.println((enabledSet && itemsSet));
+        return (enabledSet && itemsSet);
     }
 }
