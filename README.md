@@ -11,14 +11,14 @@ This program has been tested on Spigot 1.14.4, without any issues. If you run in
 ## Program Use
 Load the plugin by placing it inside the plugin folder.
 ### Commands
-`/nd` - Adds the held item to the no drop list.
-`/nd remove` - Removes the item from the no drop list.
-`/nd check` - Checks if the held item is in the no drop list.
+* `/nd` - Adds the held item to the no drop list.
+* `/nd remove` - Removes the item from the no drop list.
+* `/nd check` - Checks if the held item is in the no drop list.
 ### Permissions
-`nodrop.drop` - Enables `/nd` command.
-`nodrop.remove` - Enables `/nd remove` command.
-`nodrop.check` - Enables `/nd check` command.
-`nodrop.limit.*` - Limits the player to * items in the no drop list. 
+* `nodrop.drop` - Enables `/nd` command. 
+* `nodrop.remove` - Enables `/nd remove` command.
+* `nodrop.check` - Enables `/nd check` command.
+* `nodrop.limit.*` - Limits the player to * items in the no drop list. 
 
 ## Version History
 ### v1.0.0 (not released)
