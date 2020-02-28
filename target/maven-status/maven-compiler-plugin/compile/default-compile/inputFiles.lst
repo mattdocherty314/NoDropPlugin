@@ -2,6 +2,7 @@ B:\mattd\Documents\GitHub Repositories\NoDropPlugin\src\main\java\me\mattdochert
 B:\mattd\Documents\GitHub Repositories\NoDropPlugin\src\main\java\me\mattdocherty\nodropplugin\commands\BaseCommand.java
 B:\mattd\Documents\GitHub Repositories\NoDropPlugin\src\main\java\me\mattdocherty\nodropplugin\files\PlayerOptionsConfig.java
 B:\mattd\Documents\GitHub Repositories\NoDropPlugin\src\main\java\me\mattdocherty\nodropplugin\convert\SerializeItem.java
+B:\mattd\Documents\GitHub Repositories\NoDropPlugin\src\main\java\me\mattdocherty\nodropplugin\commands\ListItems.java
 B:\mattd\Documents\GitHub Repositories\NoDropPlugin\src\main\java\me\mattdocherty\nodropplugin\NoDropPlugin.java
 B:\mattd\Documents\GitHub Repositories\NoDropPlugin\src\main\java\me\mattdocherty\nodropplugin\commands\Add.java
 B:\mattd\Documents\GitHub Repositories\NoDropPlugin\src\main\java\me\mattdocherty\nodropplugin\events\OnPlayerDropItem.java

@@ -8,3 +8,4 @@ me\mattdocherty\nodropplugin\convert\SerializeItem.class
 me\mattdocherty\nodropplugin\commands\BaseCommand.class
 me\mattdocherty\nodropplugin\events\OnPlayerJoin.class
 me\mattdocherty\nodropplugin\NoDropPlugin.class
+me\mattdocherty\nodropplugin\commands\ListItems.class
