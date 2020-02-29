@@ -38,6 +38,12 @@ public class BaseCommand implements CommandExecutor {
                             return true;
                         }
                         return Check.checkItem(p, playerUUID);
+                    case "list":
+                        if (!p.hasPermission("nodrop.list")) {
+                            p.sendMessage(ChatColor.DARK_RED + "You do not have permission to run that command.");
+                            return true;
+                        }
+                        return ListItems.listItems(p, playerUUID);
                     // Otherwise, say to user invalid command
                     default:
                         p.sendMessage(ChatColor.DARK_RED + "Invalid Command!");

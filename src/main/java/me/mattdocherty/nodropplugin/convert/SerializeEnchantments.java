@@ -16,5 +16,20 @@ public class SerializeEnchantments {
 
         return serializedEnchantment;
     }
+
+    public static String convertFromNumberToNumeral(Integer level) {
+        switch (level) {
+            case 2:
+                return "II";
+            case 3:
+                return "III";
+            case 4:
+                return "IV";
+            case 5:
+                return "V";
+            default:
+                return "";
+        }
+    }
 }
 
