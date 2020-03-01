@@ -16,31 +16,40 @@ public class ListItems {
 
         // Check to see if there is a list in the config
         if (itemList != null && itemList.size() != 0) {
-            p.sendMessage(ChatColor.DARK_AQUA + "Items on your No Drop list are:");
-            int itemCount = 1;
+            p.sendMessage(ChatColor.GOLD + "Items on your No Drop list are:"); // Title of List
+
+            int itemCount = 1; // To count the items
+            // Go through all the items in the list
             for (Map<?, ?> item : itemList) {
+                // Create variables once rather multiple times while checking
                 String itemType = item.get("item-type").toString();
                 String itemName = item.get("item-name").toString();
                 ArrayList<String> itemLore = (ArrayList<String>)item.get("item-lore");
                 Map<String, Integer> itemEnchants = ((Map<String, Integer>)item.get("item-enchants"));
 
-                p.sendMessage(ChatColor.DARK_AQUA+"("+itemCount+") "+ChatColor.AQUA+itemType);
+                // Item Type
+                p.sendMessage(ChatColor.GOLD+"("+itemCount+") "+ChatColor.YELLOW+itemType);
 
+                // Only Present the extra information if it exists
+                // Item Name
                 if (!itemName.equals("")) {
-                    p.sendMessage(ChatColor.DARK_AQUA+"  Name: '"+ChatColor.AQUA+itemName+ChatColor.DARK_AQUA+"'");
+                    p.sendMessage(ChatColor.GOLD+"  Name: '"+ChatColor.YELLOW+itemName+ChatColor.GOLD+"'");
                 }
+                // Item Lore
                 if (itemLore != null) {
-                    p.sendMessage(ChatColor.DARK_AQUA+"  Lore:");
+                    p.sendMessage(ChatColor.GOLD+"  Lore:");
                     for (int i = 0; i < itemLore.size(); i++) {
-                        p.sendMessage("    "+ChatColor.AQUA+"'"+itemLore.get(i)+ChatColor.AQUA+"'");
+                        p.sendMessage("    "+ChatColor.YELLOW+"'"+itemLore.get(i)+ChatColor.YELLOW+"'");
                     }
                 }
+                // Item Enchantments
                 if (itemEnchants.size() != 0) {
-                    p.sendMessage(ChatColor.DARK_AQUA+"  Enchantments:");
+                    p.sendMessage(ChatColor.GOLD+"  Enchantments:");
                     for (Map.Entry<String, Integer> enchant : itemEnchants.entrySet()) {
-                        String enchName = (enchant.getKey().split("minecraft:")[1]).split("'")[0];
+                        // Store the name and level of the enchantment in a variable
+                        String enchName = (enchant.getKey().split("minecraft:")[1]).split("'")[0]; // Remove the 'minecraft:'
                         String enchLvl = SerializeEnchantments.convertFromNumberToNumeral(enchant.getValue());
-                        p.sendMessage("    "+ChatColor.AQUA+"'"+enchName+" "+enchLvl+ChatColor.AQUA+"'");
+                        p.sendMessage("    "+ChatColor.YELLOW+"'"+enchName+" "+enchLvl+ChatColor.YELLOW+"'");
                     }
                 }
                 itemCount++;

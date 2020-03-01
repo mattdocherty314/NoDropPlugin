@@ -18,7 +18,10 @@ public class SerializeEnchantments {
     }
 
     public static String convertFromNumberToNumeral(Integer level) {
+        // Convert the number into the Roman Numeral (Will make a function, rather than hardcode)
         switch (level) {
+            case 1:
+                return "";
             case 2:
                 return "II";
             case 3:
@@ -28,7 +31,7 @@ public class SerializeEnchantments {
             case 5:
                 return "V";
             default:
-                return "";
+                return level.toString();
         }
     }
 }
