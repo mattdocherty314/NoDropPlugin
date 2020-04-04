@@ -9,6 +9,9 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
+import static java.lang.Double.isNaN;
+import static java.lang.Integer.parseInt;
+
 public class Remove {
     public static boolean removeItem(Player p, String playerUUID) {
         ItemStack itemToRemove = p.getInventory().getItemInMainHand(); // Get item from hand
@@ -34,7 +37,34 @@ public class Remove {
         return true;
     }
 
-    public static boolean removeID(Player p, String playerUUID, String id) {
-        return false;
+    public static boolean removeID(Player p, String playerUUID, int id) {
+        List<Map<?, ?>> itemList = PlayerOptionsConfig.get().getMapList(playerUUID + ".items"); // Load list from config
+
+        // Give error if 'id' is invalid
+        if (isNaN(id) || itemList.size() < id || id <= 0) {
+            p.sendMessage(ChatColor.RED + "Invalid drop check ID.");
+        }
+
+        // Check to see if there is a list in the config
+        else if (itemList != null && itemList.size() != 0) {
+            int itemCount = 1; // To count the items
+            for (Map<?, ?> item : itemList) {
+                if (itemCount == id) {
+                    // Remove item from list and save to config
+                    itemList.remove(item);
+                    PlayerOptionsConfig.get().set(playerUUID + ".items", itemList);
+                    PlayerOptionsConfig.save();
+                    p.sendMessage(ChatColor.GREEN + "You have removed item "+id+" from your drop check items.");
+                    break;
+                }
+
+                itemCount++;
+            }
+        }
+        // Give error for having nothing in the no drop list or no drop list initialised
+        else {
+            p.sendMessage(ChatColor.RED + "You do not have anything in your drop check items.");
+        }
+        return true;
     }
 }

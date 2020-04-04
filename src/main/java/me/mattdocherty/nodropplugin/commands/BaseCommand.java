@@ -30,10 +30,12 @@ public class BaseCommand implements CommandExecutor {
                             p.sendMessage(ChatColor.DARK_RED + "You do not have permission to run that command.");
                             return true;
                         }
-                        if (args.length == 2) {
+                        if (args.length == 1) {
                             return Remove.removeItem(p, playerUUID);
                         }
-                        return Remove.removeID(p, playerUUID, args[2]);
+                        else {
+                            return Remove.removeID(p, playerUUID, Integer.parseInt(args[1]));
+                        }
                     // If 'check' argument is given, check if the item held in the player's hand is in the list of no drop items.
                     case "check":
                         if (!p.hasPermission("nodrop.check")) {
