@@ -12,7 +12,7 @@ This program has been tested on Spigot 1.14.4, without any issues. If you run in
 Load the plugin by placing it inside the plugin folder.
 ### Commands
 * `/nd` - Adds the held item to the no drop list.
-* `/nd remove` - Removes the item from the no drop list.
+* `/nd remove [id]` - Removes the item or the no drop id from the no drop list.
 * `/nd check` - Checks if the held item is in the no drop list.
 * `/nd list` - Lists everything in the no drop list
 ### Permissions
@@ -32,6 +32,10 @@ Load the plugin by placing it inside the plugin folder.
 ### v1.1.0
 * Made command `/nd list`
 
+### v1.1.1
+* Added the optional argument to the command `/nd remove`
+
 ## TODO
 * Efficient use of configuration space
 * Make GUI list option
+* Fix error when typing text instead of a number at the end of `/nd remove [id]`
