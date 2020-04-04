@@ -33,4 +33,8 @@ public class Remove {
         }
         return true;
     }
+
+    public static boolean removeID(Player p, String playerUUID, String id) {
+        return false;
+    }
 }
