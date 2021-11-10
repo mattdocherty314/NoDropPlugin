@@ -34,7 +34,12 @@ public class BaseCommand implements CommandExecutor {
                             return Remove.removeItem(p, playerUUID);
                         }
                         else {
-                            return Remove.removeID(p, playerUUID, Integer.parseInt(args[1]));
+                            try {
+                                return Remove.removeID(p, playerUUID, Integer.parseInt(args[1]));
+                            } catch(NumberFormatException e) {
+                                p.sendMessage(ChatColor.RED + "Invalid drop check ID.");
+                                return true;
+                            }
                         }
                     // If 'check' argument is given, check if the item held in the player's hand is in the list of no drop items.
                     case "check":

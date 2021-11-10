@@ -1,2 +1,3 @@
 enabled-by-default: true
+click-list-to-remove: true
 default-undroppable-items:

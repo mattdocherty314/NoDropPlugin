@@ -3,10 +3,10 @@
 This is a Spigot 1.14.4+ Plugin made for [FruitServers](https://www.fruitservers.net/) to prevent accidental item drops by players.
 
 ## Dependencies
-* Spigot (tested from v1.14.4 to v1.15.1)
+* Spigot (tested from v1.14.4 to v1.17.1)
 
 ## Debugging
-This program has been tested on Spigot 1.14.4, without any issues. If you run into any errors please make sure you are on this version because it is known to work. If you still are having issues on the aforementioned version, just send me a message on my [GitHub](https://github.com/mattdocherty314)
+This program has been tested on Spigot 1.17.1, without any issues. If you run into any errors please make sure you are on this version because it is known to work. If you still are having issues on the aforementioned version, just send me a message on my [GitHub](https://github.com/mattdocherty314)
 
 ## Program Use
 Load the plugin by placing it inside the plugin folder.
@@ -35,7 +35,10 @@ Load the plugin by placing it inside the plugin folder.
 ### v1.1.1
 * Added the optional argument to the command `/nd remove`
 
-## TODO
+### v1.2.0
 * Efficient use of configuration space
 * Make GUI list option
 * Fix error when typing text instead of a number at the end of `/nd remove [id]`
+
+## TODO
+_Contact me, if you would like a feature added to this_

@@ -1,7 +1,7 @@
 name: NoDropPlugin
-version: 1.1.1
+version: 1.2.0
 main: me.mattdocherty.nodropplugin.NoDropPlugin
-api-version: 1.13
+api-version: 1.17
 authors: [MatthewDocherty]
 description: Checks to see if the user is willing to drop the item.
 commands:

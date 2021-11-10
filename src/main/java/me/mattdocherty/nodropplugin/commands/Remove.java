@@ -41,7 +41,7 @@ public class Remove {
         List<Map<?, ?>> itemList = PlayerOptionsConfig.get().getMapList(playerUUID + ".items"); // Load list from config
 
         // Give error if 'id' is invalid
-        if (isNaN(id) || itemList.size() < id || id <= 0) {
+        if (itemList.size() < id || id <= 0) {
             p.sendMessage(ChatColor.RED + "Invalid drop check ID.");
         }
 

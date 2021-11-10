@@ -11,7 +11,7 @@ public class SerializeEnchantments {
 
         // Go through all of the list of enchantments and serialize them
         enchantments.forEach((enchantment, level) -> {
-            serializedEnchantment.put("'" + enchantment.getKey().toString() + "'", level);
+            serializedEnchantment.put("'" + enchantment.getKey() + "'", level);
         });
 
         return serializedEnchantment;

@@ -1,5 +1,6 @@
 package me.mattdocherty.nodropplugin;
 
+import me.mattdocherty.nodropplugin.events.OnListItems;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import me.mattdocherty.nodropplugin.commands.BaseCommand;
@@ -12,6 +13,7 @@ public final class NoDropPlugin extends JavaPlugin {
         // Register Events
         this.getServer().getPluginManager().registerEvents(new OnPlayerDropItem(), this);
         this.getServer().getPluginManager().registerEvents(new OnPlayerJoin(), this);
+        this.getServer().getPluginManager().registerEvents(new OnListItems(), this);
 
         // Load config files
         this.getConfig().options().copyDefaults();
